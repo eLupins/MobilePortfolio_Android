@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
   - enabled: 1
-    path: Assets/MyAssets/Scenes/My_VFXScene.unity
+    path: Assets/MyAssets/Scenes/ANDROID BUILD.unity
     guid: 722f7c1a7750a6844a93e9e9c75949f5
   m_configObjects: {}
