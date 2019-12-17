@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 public class ObjectSpawn : MonoBehaviour
 {
 
-    public GameObject[] VFX;
-    private GameObject VFX_instance;
+    public GameObject[] VFX; //Array of gameobjects to spawn
+    private GameObject VFX_instance; //
 
     /******* SPAWN POINT INFORMATION *******/
     public GameObject spawnpoint_ABOVEGROUND;
@@ -23,11 +23,13 @@ public class ObjectSpawn : MonoBehaviour
         transform_ABOVEGROUND = spawnpoint_ABOVEGROUND.transform;
     }
 
+    /*
     // Update is called once per frame
     void Update()
     {
         
     }
+    */
 
     public void CallEffect00()
     {
@@ -56,7 +58,7 @@ public class ObjectSpawn : MonoBehaviour
 
     public void CallEffect03()
     {
-        //default vfx graph
+        //hexagonal shield
         GarbageCollector(spawnpoint_ABOVEGROUND, spawnPoint_GROUNDED);
         InstanceCreation(VFX[3], spawnpoint_ABOVEGROUND);
         VFX[3].SetActive(true);

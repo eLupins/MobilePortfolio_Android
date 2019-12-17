@@ -9561,7 +9561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4562323090985108375}
   m_Layer: 0
-  m_Name: VFX_Sparks_02
+  m_Name: VFX_SparksSpray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
