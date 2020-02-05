@@ -10,7 +10,7 @@ Material:
   m_Name: SG_Shield
   m_Shader: {fileID: -6465566751694194690, guid: c87528de89b74454e848b372735161bd,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -25,9 +25,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2AAA5312: 5.62
-    - Vector1_7563E70E: 0.09
-    - Vector1_7CD0246F: 0.68
-    - Vector1_BC6F8B2E: 5
+    - Vector1_2AAA5312: 0.55
+    - Vector1_7563E70E: 0.13
+    - Vector1_7CD0246F: 0.8
+    - Vector1_BC6F8B2E: 7.1
     m_Colors:
-    - Color_4A24A3E0: {r: 0, g: 0.43527526, b: 0.33627146, a: 0}
+    - Color_4A24A3E0: {r: 0.058543254, g: 4.0980277, b: 3.278422, a: 0}

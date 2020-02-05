@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2241939485411599126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25516306266712631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 1c1afad454cf17a47ac04633f2e8ece9, type: 2}
 --- !u!1001 &8009499394939667762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,25 +24,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 931950015641049738, guid: be6d5a269f60c0345a5bc415f41c554a,
+        type: 3}
+      propertyPath: height
+      value: 2.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 931950015641049738, guid: be6d5a269f60c0345a5bc415f41c554a,
+        type: 3}
+      propertyPath: speed
+      value: 0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 931950015641049738, guid: be6d5a269f60c0345a5bc415f41c554a,
+        type: 3}
+      propertyPath: x_Pos
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 931950015641049738, guid: be6d5a269f60c0345a5bc415f41c554a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8033810069526425349, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
       propertyPath: m_Name
       value: Hexagon Shield Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8033810069526425350, guid: be6d5a269f60c0345a5bc415f41c554a,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.56
+      objectReference: {fileID: 0}
     - target: {fileID: 8033810069526425369, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.11
       objectReference: {fileID: 0}
     - target: {fileID: 8033810069526425369, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: 8033810069526425369, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 8033810069526425369, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
@@ -67,20 +109,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 931950015641049738, guid: be6d5a269f60c0345a5bc415f41c554a,
+    - target: {fileID: 8033810069526425369, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
-      propertyPath: height
-      value: 2.92
+      propertyPath: m_LocalScale.x
+      value: 6.4250054
       objectReference: {fileID: 0}
-    - target: {fileID: 931950015641049738, guid: be6d5a269f60c0345a5bc415f41c554a,
+    - target: {fileID: 8033810069526425369, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
-      propertyPath: speed
-      value: 0.91
+      propertyPath: m_LocalScale.y
+      value: 6.4250054
       objectReference: {fileID: 0}
-    - target: {fileID: 931950015641049738, guid: be6d5a269f60c0345a5bc415f41c554a,
+    - target: {fileID: 8033810069526425369, guid: be6d5a269f60c0345a5bc415f41c554a,
         type: 3}
-      propertyPath: x_Pos
-      value: 1.75
+      propertyPath: m_LocalScale.z
+      value: 6.4250054
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8033810069526425370, guid: be6d5a269f60c0345a5bc415f41c554a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: be6d5a269f60c0345a5bc415f41c554a, type: 3}
+--- !u!1 &25516306266712631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8033810069526425349, guid: be6d5a269f60c0345a5bc415f41c554a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8009499394939667762}
+  m_PrefabAsset: {fileID: 0}

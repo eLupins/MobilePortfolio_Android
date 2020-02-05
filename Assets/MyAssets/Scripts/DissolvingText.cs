@@ -9,12 +9,13 @@ public class DissolvingText : MonoBehaviour
     public ParticleSystem dissolvingParticles;
     public int particleCount = 2000;
     public float timer = 3.0f;
+    public bool loop = false;
 
     private void Start()
     {       
         StartCoroutine(DissolvePause(timer));
     }
-
+    
     IEnumerator DissolvePause(float time)
     {
         yield return new WaitForSeconds(time);
@@ -26,5 +27,14 @@ public class DissolvingText : MonoBehaviour
         dissolvingParticles.Clear();
         TextToDissolve.gameObject.SetActive(false);
         dissolvingParticles.Emit(particleCount);
+        
+    }
+
+    private void Update()
+    {
+        if(loop == true)
+        {
+            StartCoroutine(DissolvePause(timer));
+        }
     }
 }
