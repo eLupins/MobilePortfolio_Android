@@ -45,9 +45,9 @@ public class ObjectSpawn : MonoBehaviour
 
     public void CallEffect02()
     {
-        //default vfx graph
+        //simple vfx graph
         GarbageCollector(spawnpoint_ABOVEGROUND, spawnpoint_GROUNDED);
-        InstanceCreation(VFX[2], spawnpoint_ABOVEGROUND);
+        InstanceCreation(VFX[2], spawnpoint_GROUNDED);
         VFX[2].SetActive(true);
     }
 
@@ -55,7 +55,9 @@ public class ObjectSpawn : MonoBehaviour
     {
         //hexagonal shield
         GarbageCollector(spawnpoint_ABOVEGROUND, spawnpoint_GROUNDED);
-        InstanceCreation(VFX[3], spawnpoint_ABOVEGROUND);
+        GameObject ins = InstanceCreation(VFX[3], spawnpoint_ABOVEGROUND);
+        //Rotate 180deg because for some reason the prefab likes to spawn facing away from the camera
+        ins.transform.localRotation = new Quaternion(0f, 180f, 0f, 0f);
         VFX[3].SetActive(true);
     }
 
@@ -72,12 +74,18 @@ public class ObjectSpawn : MonoBehaviour
     {
         //water shader
         GarbageCollector(spawnpoint_ABOVEGROUND, spawnpoint_GROUNDED);
-        InstanceCreation(VFX[5], spawnpoint_GROUNDED);
-        _instance.transform.localRotation = Quaternion.Euler(-68.375f, 0, 0);
+        InstanceCreation(VFX[5], spawnpoint_ABOVEGROUND);
+        //_instance.transform.localRotation = Quaternion.Euler(-68.375f, 0, 0);
         VFX[5].SetActive(true);
     }
 
-
+    public void CallEffect06()
+    {
+        //swarm effect
+        GarbageCollector(spawnpoint_ABOVEGROUND, spawnpoint_GROUNDED);
+        InstanceCreation(VFX[2], spawnpoint_ABOVEGROUND);
+        VFX[2].SetActive(true);
+    }
 
     /************************* FUNCTIONS TO HANDLE BACKGROUND PROCESSES *************************/
 
