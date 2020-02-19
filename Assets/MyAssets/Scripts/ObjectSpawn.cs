@@ -25,6 +25,7 @@ public class ObjectSpawn : MonoBehaviour
         //transform_FACECAM = spawnpoint_FACECAM.transform;
     }
 
+    /************************* EFFECT CALLS *************************/
 
     public void CallEffect00()
     {
@@ -47,7 +48,7 @@ public class ObjectSpawn : MonoBehaviour
     {
         //simple vfx graph
         GarbageCollector(spawnpoint_ABOVEGROUND, spawnpoint_GROUNDED);
-        InstanceCreation(VFX[2], spawnpoint_GROUNDED);
+        InstanceCreation(VFX[2], spawnpoint_ABOVEGROUND);
         VFX[2].SetActive(true);
     }
 
@@ -55,7 +56,7 @@ public class ObjectSpawn : MonoBehaviour
     {
         //hexagonal shield
         GarbageCollector(spawnpoint_ABOVEGROUND, spawnpoint_GROUNDED);
-        GameObject ins = InstanceCreation(VFX[3], spawnpoint_ABOVEGROUND);
+        GameObject ins = InstanceCreation(VFX[3], spawnpoint_GROUNDED);
         //Rotate 180deg because for some reason the prefab likes to spawn facing away from the camera
         ins.transform.localRotation = new Quaternion(0f, 180f, 0f, 0f);
         VFX[3].SetActive(true);
@@ -68,6 +69,11 @@ public class ObjectSpawn : MonoBehaviour
         InstanceCreation(VFX[4], spawnpoint_ABOVEGROUND);
         _instance.transform.localRotation = Quaternion.Euler(12.209f, 0, 0);
         VFX[4].SetActive(true);
+
+        while(VFX[4].activeSelf == true)
+        {
+            Reload(VFX[4], spawnpoint_ABOVEGROUND);
+        }
     }
 
     public void CallEffect05()
@@ -129,6 +135,15 @@ public class ObjectSpawn : MonoBehaviour
         else
         {
             return;
+        }
+    }
+    
+    public void Reload(GameObject vfx, GameObject parent)
+    {
+        while(parent.transform.childCount == 1){
+
+            Debug.Log("Chlld exists:" + vfx);
+
         }
     }
 }
