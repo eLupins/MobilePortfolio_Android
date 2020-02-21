@@ -70,10 +70,7 @@ public class ObjectSpawn : MonoBehaviour
         _instance.transform.localRotation = Quaternion.Euler(12.209f, 0, 0);
         VFX[4].SetActive(true);
 
-        while(VFX[4].activeSelf == true)
-        {
-            Reload(VFX[4], spawnpoint_ABOVEGROUND);
-        }
+        
     }
 
     public void CallEffect05()
@@ -123,26 +120,20 @@ public class ObjectSpawn : MonoBehaviour
             }
         }
 
-        /*
-        else if (parent3.transform.childCount > 0)
-        {
-            foreach (Transform child in parent3.transform)
-            {
-                Destroy(child.gameObject);
-            }
-        }
-        */
         else
         {
             return;
         }
     }
     
-    public void Reload(GameObject vfx, GameObject parent)
+    public void Reload(GameObject parent)
     {
         while(parent.transform.childCount == 1){
 
-            Debug.Log("Chlld exists:" + vfx);
+            foreach (Transform child in parent.transform)
+            {
+                Debug.Log("Chlld exists:" + child);
+            }
 
         }
     }
